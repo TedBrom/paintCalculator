@@ -63,7 +63,7 @@ public class Main
         calcPrice(litresNeeded(wallSize(length, width, height, coats))); // call the calculate price procedure
 
         displayPrice(calcPrice(litresNeeded(wallSize(length, width, height, coats)))); // display the final price based on the above results
-        //I fixed the GitHub REPO
+        //I fixed the GitHub attempting now via cmd line
 
     }
 }
