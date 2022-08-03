@@ -60,7 +60,7 @@ public class Main
 
         dispLitres(litresNeeded(wallSize(length, width, height, coats))); // call the display litres procedure
 
-        calcPrice(litresNeeded(wallSize(length, width, height, coats))); // call the calculate price procedure
+        calcPrice(litresNeeded(wallSize(length, width, height, coats))); // call then calculate price procedure
 
         displayPrice(calcPrice(litresNeeded(wallSize(length, width, height, coats)))); // display the final price based on the above results
 
