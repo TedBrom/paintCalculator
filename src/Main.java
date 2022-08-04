@@ -42,6 +42,9 @@ public class Main
         double coats; // store the coats the customer wants
         int numWalls; // store the number of walls
 
+        calcPaint myObj = new calcPaint();
+        System.out.println(myObj.x);
+
         Scanner input = new Scanner(System.in); //declare a scanner variable to be used below
 
         System.out.println("What is the length of your room "); // display a request to get the length
