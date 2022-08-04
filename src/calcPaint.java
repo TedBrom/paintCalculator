@@ -1,4 +1,5 @@
 public class calcPaint
 {
-    int x = 5;
+    double cost = 6;
+    String brand = "Ikea basic";
 }

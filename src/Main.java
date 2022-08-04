@@ -42,8 +42,11 @@ public class Main
         double coats; // store the coats the customer wants
         int numWalls; // store the number of walls
 
-        calcPaint myObj = new calcPaint();
-        System.out.println(myObj.x);
+        calcPaint paintCan = new calcPaint();
+        System.out.println("The cost of the paint is " + paintCan.cost
+        + " the brand of this paint is " + paintCan.brand);
+
+
 
         Scanner input = new Scanner(System.in); //declare a scanner variable to be used below
 
