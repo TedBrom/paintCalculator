@@ -1,11 +1,11 @@
 import java.util.Scanner;
 public class Main
 {
-    public static double wallSize(double length, double width, double height, double coats) //calculate the wall size based on user input
+    public static double wallSize(double length, double width, double height, double coats, int numWalls) //calculate the wall size based on user input
     {
         double wallArea; // declare a variable to store the area of a wall
         double perimeter = (length * 2) + (width * 2); // calculate the perimeter of a wall based on the inputs
-        wallArea = (perimeter * height) * coats; // the total area = the perimeter times the height of the room + the number of coats the customer wants
+        wallArea = (((perimeter * height) * coats) * numWalls); // the total area = the perimeter times the height of the room + the number of coats the customer wants
         return wallArea; // send the value back from the function so other processes can use it.
     }
     public static double litresNeeded(double wallArea) //figure out based on wall size how many litres are needed
@@ -14,10 +14,7 @@ public class Main
         double litresNeeded = wallArea / sqMetPrLitr; // divide the area by the amount a can of paint can cover
         return litresNeeded; // return it so another function can use it
     }
-    public static void dispLitres(double litresNeeded) //simple procedure to display the litres needed
-    {
-        System.out.println("You need " + litresNeeded + " litres of paint."); // print the overall value of the litres needed
-    }
+
     public static double calcPrice(double litresNeeded) //get the litres needed from the litres needed function and then apply it below
     {
         double totalPrice; // declare a variable to store the total price
@@ -26,6 +23,10 @@ public class Main
         return totalPrice; // pass the calculated back to the top so other functions can use it
     }
 
+    public static void dispLitres(double litresNeeded) //simple procedure to display the litres needed
+    {
+        System.out.println("You need " + litresNeeded + " litres of paint."); // print the overall value of the litres needed
+    }
     public static void displayPrice(double totalPrice) //based on the results from above display the price bringing the total price across to display.
     {
 
@@ -39,6 +40,7 @@ public class Main
         double width; // store the width of our room
         double height; // store the height of our room
         double coats; // store the coats the customer wants
+        int numWalls; // store the number of walls
 
         Scanner input = new Scanner(System.in); //declare a scanner variable to be used below
 
@@ -54,16 +56,18 @@ public class Main
         System.out.println("How many coats of paint do you want? "); // display a request to get the coats
         coats = input.nextDouble(); // take the input for coats
 
-        wallSize(length, width, height, coats); // call the wall size calculation
+        System.out.println("How many walls are in the room?");
+        numWalls = input.nextInt();
 
-        litresNeeded(wallSize(length, width, height, coats)); // call the litres needed procedure
+        wallSize(length, width, height, coats, numWalls); // call the wall size calculation
 
-        dispLitres(litresNeeded(wallSize(length, width, height, coats))); // call the display litres procedure
+        litresNeeded(wallSize(length, width, height, coats, numWalls)); // call the litres needed procedure
 
-        calcPrice(litresNeeded(wallSize(length, width, height, coats))); // call the calculate price procedure
+        dispLitres(litresNeeded(wallSize(length, width, height, coats, numWalls))); // call the display litres procedure
 
-        displayPrice(calcPrice(litresNeeded(wallSize(length, width, height, coats)))); // display the final price based on the above results
-        //I fixed the GitHub attempting now via cmd line without issues
+        calcPrice(litresNeeded(wallSize(length, width, height, coats, numWalls))); // call the calculate price procedure
+
+        displayPrice(calcPrice(litresNeeded(wallSize(length, width, height, coats, numWalls)))); // display the final price based on the above results
 
     }
 }
