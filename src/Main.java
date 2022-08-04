@@ -26,6 +26,8 @@ public class Main
         System.out.println("How many coats of paint do you want? "); // display a request to get the coats
         coats = input.nextInt(); // take the input for coats
 
+        // test feature to ensure the data is accurately collected from the above lines
+        // and test the calculations
         System.out.println("The length of your room is " + roomSize.getLength() + " metres " +
                 " the height of the room is " + roomSize.getHeight() + " metres " + " and an overall area of " +
                 roomSize.areaCalc(height, length)
