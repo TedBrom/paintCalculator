@@ -41,6 +41,21 @@ public class Main
         double height; // store the height of our room
         double coats; // store the coats the customer wants
         int numWalls; // store the number of walls
+        Scanner input = new Scanner(System.in); //declare a scanner variable to be used below
+
+        RoomSize roomSize = new RoomSize();
+
+        System.out.println("What is the height of your room "); // display a request to get the height
+        roomSize.setHeight(input.nextDouble());
+
+        System.out.println("What is the length of your room "); // display a request to get the length
+        roomSize.setLength(input.nextDouble());
+
+        System.out.println("How many walls are in the room?");
+        roomSize.setWalls(input.nextInt());
+
+        System.out.println("Length is " + roomSize.getLength() + " the height of the room is " + roomSize.getHeight()
+        + " there are " + roomSize.getWalls());
 
         calcPaint paintCan = new calcPaint();
         System.out.println("The cost of the paint is " + paintCan.cost
@@ -48,7 +63,7 @@ public class Main
 
 
 
-        Scanner input = new Scanner(System.in); //declare a scanner variable to be used below
+
 
         System.out.println("What is the length of your room "); // display a request to get the length
         length = input.nextDouble(); // take the input for length

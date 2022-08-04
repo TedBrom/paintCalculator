@@ -4,14 +4,33 @@ public class RoomSize
 {
         double length;
         double height;
-        double walls;
+        int walls;
 
-        public RoomSize(double givenLength, double givenHeight, double numWalls)
+        public double getLength()
         {
-            length = givenLength;
-            height = givenHeight;
-            walls = numWalls;
+            return length;
         }
+        public double getHeight()
+        {
+            return height;
+        }
+        public int getWalls()
+        {
+            return walls;
+        }
+        public void setLength(double newLength)
+        {
+            length = newLength;
+        }
+        public void setHeight(double newHeight)
+         {
+            height = newHeight;
+         }
+        public void setWalls(int newWalls)
+        {
+            walls = newWalls;
+        }
+
         public static void main (String[] args)
         {
 
