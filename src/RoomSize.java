@@ -7,6 +7,8 @@ public class RoomSize
         int walls;
         double area;
         double cost;
+        int coats;
+        double pricePerSqM = 6;
 
         public double getLength()
         {
@@ -32,6 +34,10 @@ public class RoomSize
         {
             walls = newWalls;
         }
+        public void setCoats(int numCoats)
+        {
+            coats = numCoats;
+        }
 
         public double areaCalc(double height, double length)
         {
@@ -43,7 +49,7 @@ public class RoomSize
         }
         public double costCalc()
         {
-            return cost = area * walls;
+            return cost = (area * walls) / pricePerSqM * coats;
         }
         public static void main (String[] args)
         {

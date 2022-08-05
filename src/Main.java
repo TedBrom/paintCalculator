@@ -25,15 +25,19 @@ public class Main
 
         System.out.println("How many coats of paint do you want? "); // display a request to get the coats
         coats = input.nextInt(); // take the input for coats
+        roomSize.setCoats(coats);
 
         // test feature to ensure the data is accurately collected from the above lines
         // and test the calculations
+
         System.out.println("The length of your room is " + roomSize.getLength() + " metres " +
                 " the height of the room is " + roomSize.getHeight() + " metres " + " and an overall area of " +
                 roomSize.areaCalc(height, length)
         + " there are " + roomSize.getWalls() + " walls in your room " + "you wanted " + coats + " coats of paint "
         + " from this the total cost of the room will be "+ roomSize.costCalc());
 
+        // begin the process of creating a paintCan object
+        // future iterations will be able to change the brand of paint
         calcPaint paintCan = new calcPaint();
         System.out.println("The cost of the paint is " + paintCan.cost + " per can of paint "
         + " the brand of this paint is " + paintCan.brand);
