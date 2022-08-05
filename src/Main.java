@@ -44,8 +44,8 @@ public class Main
             System.out.println("The cost of the paint is " + paintCan.cost + " per can of paint "
                     + " the brand of this paint is " + paintCan.brand);
         } catch (Exception e){
-            System.out.println("Something went wrong! Did you enter a silly value?");
-            System.out.println("Please reboot the program and try again. ");
+            System.out.println("Something went wrong! Sorry I can only accept number values!");
+            System.out.println("Please reboot me and try again. ");
         }
 
 
