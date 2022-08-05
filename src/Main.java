@@ -3,8 +3,8 @@ public class Main
 {
     public static void main(String[] args)
     {
-        double length;
-        double height;
+        double length; // store the length of the wall
+        double height; // store the height of the wall
         int coats; // store the coats the customer wants
         int numWalls; // store the number of walls
 
