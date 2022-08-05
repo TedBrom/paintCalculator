@@ -6,6 +6,7 @@ public class RoomSize
         double height;
         int walls;
         double area;
+        double cost;
 
         public double getLength()
         {
@@ -37,7 +38,14 @@ public class RoomSize
             return area = height * length;
 
         }
-
+        public void setCost(double newCost)
+        {
+            cost = newCost;
+        }
+        public double costCalc()
+        {
+            return cost = area * walls;
+        }
         public static void main (String[] args)
         {
 

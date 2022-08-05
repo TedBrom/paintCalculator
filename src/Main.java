@@ -31,7 +31,8 @@ public class Main
         System.out.println("The length of your room is " + roomSize.getLength() + " metres " +
                 " the height of the room is " + roomSize.getHeight() + " metres " + " and an overall area of " +
                 roomSize.areaCalc(height, length)
-        + " there are " + roomSize.getWalls() + " walls in your room " + "you wanted " + coats + " coats of paint ");
+        + " there are " + roomSize.getWalls() + " walls in your room " + "you wanted " + coats + " coats of paint "
+        + " from this the total cost of the room will be "+ roomSize.costCalc());
 
         calcPaint paintCan = new calcPaint();
         System.out.println("The cost of the paint is " + paintCan.cost + " per can of paint "
