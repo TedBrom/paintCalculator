@@ -11,8 +11,8 @@ public class Main
         Scanner input = new Scanner(System.in); //declare a scanner variable to be used below
         RoomSize roomSize = new RoomSize();
 
-
-        try{
+        try
+        {
             System.out.println("What is the height of your room in metres"); // display a request to get the height
             height = input.nextDouble(); // take the input for height
             roomSize.setHeight(height);
@@ -29,9 +29,9 @@ public class Main
             coats = input.nextInt(); // take the input for coats
             roomSize.setCoats(coats);
 
+
             // test feature to ensure the data is accurately collected from the above lines
             // and test the calculations
-
             System.out.println("The length of your room is " + roomSize.getLength() + " metres " +
                     " the height of the room is " + roomSize.getHeight() + " metres " + " and an overall area of " +
                     roomSize.areaCalc(height, length)
@@ -41,12 +41,21 @@ public class Main
             // begin the process of creating a paintCan object
             // future iterations will be able to change the brand of paint
             calcPaint paintCan = new calcPaint();
-            System.out.println("The cost of the paint is " + paintCan.cost + " per can of paint "
+            System.out.println(" The cost of the paint is " + paintCan.cost + " per can of paint "
                     + " the brand of this paint is " + paintCan.brand);
-        } catch (Exception e){
+
+
+        }
+        catch (Exception e)
+        {
             System.out.println("Something went wrong! Sorry I can only accept number values!");
             System.out.println("Please reboot me and try again. ");
+
         }
+
+
+
+
 
 
     }

@@ -1,13 +1,13 @@
 
 public class RoomSize
 {
-        double length;
-        double height;
-        int walls;
-        double area;
-        double cost;
-        int coats;
-        double pricePerSqM = 6;
+        double length; // store the length
+        double height; // store the height
+        int walls; // store the number of walls
+        double area; // store the area of the walls
+        double cost; // store the total cost
+        int coats; // store the number of coats
+        double pricePerSqM = 6; //store the price per square meter
 
         public double getLength()
         {
