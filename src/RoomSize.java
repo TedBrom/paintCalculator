@@ -36,7 +36,6 @@ public class RoomSize
         public double areaCalc(double height, double length)
         {
             return area = height * length;
-
         }
         public void setCost(double newCost)
         {
