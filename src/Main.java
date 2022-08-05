@@ -34,7 +34,7 @@ public class Main
                 " the height of the room is " + roomSize.getHeight() + " metres " + " and an overall area of " +
                 roomSize.areaCalc(height, length)
         + " there are " + roomSize.getWalls() + " walls in your room " + "you wanted " + coats + " coats of paint "
-        + " from this the total cost of the room will be "+ roomSize.costCalc());
+        + " from this the total cost of the room will be £"+ roomSize.costCalc());
 
         // begin the process of creating a paintCan object
         // future iterations will be able to change the brand of paint

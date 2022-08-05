@@ -22,6 +22,8 @@ public class RoomSize
         {
             return walls;
         }
+
+
         public void setLength(double newLength)
         {
             length = newLength;
@@ -38,18 +40,19 @@ public class RoomSize
         {
             coats = numCoats;
         }
+        public void setCost(double newCost)
+        {
+            cost = newCost;
+        }
+
 
         public double areaCalc(double height, double length)
         {
             return area = height * length;
         }
-        public void setCost(double newCost)
-        {
-            cost = newCost;
-        }
         public double costCalc()
         {
-            return cost = (area * walls) / pricePerSqM * coats;
+            return cost = (area * walls) / (pricePerSqM * coats);
         }
         public static void main (String[] args)
         {
